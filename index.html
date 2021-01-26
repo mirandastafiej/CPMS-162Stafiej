@@ -13,6 +13,9 @@ console.log("Input");
 
 // 1. Prompt the user for their name. Then politely greet them with a short
 //    message that includes their name.
+var name = prompt("What is your name?");
+var answer = name;
+alert("hello, " + answer);
 
 
 
@@ -25,7 +28,12 @@ console.log("If");
 //    grade you would earn in this course (look at the syllabys). You can
 //    convert a string to a number in this way (you have to define
 //    percentageString):
-
+var percent = "88%";
+var result = parseFloat(percent) / 100.0;
+var question = prompt("What did you get on the test?");
+if (question === percent) {
+  alert("Oh so you would got a B+");
+}
 // var percentage = parseFloat(percentageString);
 
 
