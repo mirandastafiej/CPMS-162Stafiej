@@ -48,11 +48,11 @@ console.log("Arrays");
 var cities = ["Pittsburgh", "New York", "Chicago", "Los Angeles", "Atlanta"];
 
 // 1. Add San Francisco to the array.
-
+cities.splice(1,0, "San Francisco");
 // 2. Remove Los Angeles from the array.
-
+cities.splice(3,3);
 // 3. Insert Seattle as the first city into the array.
-
+cities.unshift("Seattle");
 
 
 //-----------//
@@ -63,13 +63,20 @@ console.log("For Loops");
 // 1. Prompt the user for a city. Then proceed to check if the city is in
 //    the cities array. Notify the user of the outcome (either through
 //    console.log or alert).
-
+var cityInquiry = prompt("What city are you looking for?");
+for (var i = 0; i<=6; i++) {
+  if (cityInquiry === cities[i]) {
+    alert("We have a ticket for that!");
+  }
+}
 // 2. Write a program that calculates all multiplication tables up 10,
 //    1 x 1 = 1, 1 x 2 = 2, ..., and store the resuls in an array. You should
 //    output the complete computation as a string, i.e., the first entry in the
 //    array will be "1 x 1 = 1".
-
-
+var multiNum1 = ["1 x 1 = 1", "1 x 2 = 2", "1 x 3 = 3", "1 x 4 = 4", "1 x 5 = 5", "1 x 6 = 6", "1 x 7 = 7", "1 x 8 = 8", "1 x 9 = 9", "1 x 10 = 10"];
+for (var i = 0; i <= 10; i++) {
+  console.log(multiNum1)
+}
 
 </script>
 </head>
