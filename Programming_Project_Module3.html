@@ -1,0 +1,95 @@
+<html>
+<head>
+    <body>
+<script type="text/javascript">
+//---------//
+// Strings //
+//---------//
+console.log("Strings");
+
+// 1. Make all countries in the following array follow the same formatting:
+//    The first letter should be upper case, the rest lower case. Print the
+//    result to the console.
+
+var countries = ["AustraliA", "greece", "PERU", "ChInA"];
+for(i = 0; i < countries.length; i++) {
+    countries[i] = countries[i].charAt(0).toUpperCase() + countries[i].slice(1).toLowerCase();
+}
+// 2. Get every second and third letter from each country and concatenate them.
+//    Print the results to the console.
+for(i = 0; i <countries.length; i++) {
+    countries[i] = countries[i].slice(1, 2) + countries[i].slice(2, 3);
+}
+// 3. In the sentence below replace 'dart' with 'arrow' by using the indexOf
+//    and slice functions.
+
+var text = "Time flies like an dart; fruit flies like a banana.";
+var text1 = text.length;
+if (text !== - 1) {
+    var text1 = text.slice(0, text) + "arrow " + text.slice(text1 + 18);
+}
+// 4. Find the index of the last occurrence of flies in sentence.
+var text = text.lastIndexOf("flies");
+// 5. Prompt the user for a string, reverse it, and show the result to the user.
+var string = prompt("Give me a string.");
+alert(string);
+
+
+//---------//
+// Numbers //
+//---------//
+console.log("Numbers");
+
+// Use the following variable to answer the next questions.
+
+var value = 13.3;
+
+// 1. Round the value using normal math rules.
+Math.round(value);
+// 2. Round the value up.
+Math.ceil(value);
+// 3. Round the value down.
+Math.floor(value);
+// 4. Simulate a coin flip by generating a random number. Assume the coin is
+//    fair and print the result, heads or tails, to the console.
+var head = 1;
+var tails = 2;
+
+var toss = Math.random();
+var floor = Math.floor(toss)
+if (floor === 0) {
+    alert("Heads");
+}
+else if (floor === 1) {
+    alert("tails");
+}
+//-------//
+// Dates //
+//-------//
+console.log("Dates");
+
+// 1. Prompt the user for their age and proceed to show in what year they
+//    were born (you can assume they already had their birthday in the current
+//    year).
+var age = prompt("Enter your age");
+var yearOfBirth = parseInt(age) - 2021;
+alert(yearOfBirth);
+// 2. Make a program that does the following: (1) Use a prompt to obtain the
+//    birth year of the user. (2) Use a prompt to obtain the birth month of
+//    the user. (3) Use a prompt to obtain the birth day of the user.
+//    (4) Calculate how old the user is in days. (5) Show the result to
+//    the user.
+var birthYear = prompt("What year were you born?");
+var y = 2021 - birthYear;
+var yMath = y * 12 * 365;
+var birthMonth = prompt("What month were you born?");
+var m = birthMonth * 31;
+var birthDay = prompt("what day were you born?");
+var d = birthDay;
+yearMath = (yMath + m + d);
+alert("You are " + yearMath + " days old.");
+
+</script>
+</body>
+</head>
+</html>
