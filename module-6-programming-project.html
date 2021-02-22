@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CMPS 162: Module 6 Programming Project</title>
+<style>* { font-family: monospace; }</style>
+<script>
+
+//---------------------------//
+// The Document Object Model //
+//---------------------------//
+console.log("The Document Object Model");
+
+// 1. Complete the Fahrenheit to Celsius converter below. The following tasks
+//    remain: (1) on the blur event in the Fahrenheit input field call the
+//    fahrenheitToCelsius function, (2) on the blur event in the Celsius input
+//    field call the celsiusToFahrenheit function, (3) implement the
+//    fahrenheitToCelsius function that reads from the Fahrenheit input field,
+//    performs the conversion, and writes to the Celsius field, and
+//    (4) implement the celsiusToFahrenheit function that reads from the Celsius
+//    input field, performs the conversion, and writes to the Fahrenheit field.
+//    The conversion formulas are here: https://en.wikipedia.org/wiki/Fahrenheit
+//    An example is that 80 degrees Fahrenheit should be 26.7 degrees Celsius
+//    (and vice versa).
+
+// 2. Write a function to use a button that is the action event
+//    When the user selects the button it sets a timer to use the alert function in javascript
+//    It calls a function that sums 2 numbers up and divides by another number
+//    The output will read Welcome to the world of Oz and your number is __<-- The number that sums and divides
+
+
+// 3. Write a function to provide the following
+//    the current browser and operation system that you are using and if cookies is Enabled
+function fahrenheitToCelsius() {
+  var temp = parseFloat(document.getElementById("fahrenheit").value);
+  var cel = (5.0 / 9.0 * (temp-32)).toFixed(2);
+  document.getElementById("celsius").value = cel;
+}
+
+function celsiusToFahrenheit() {
+  var temp = parseFloat(document.getElementById("celsius").value);
+  var far = (9.0 / 5.0 * temp + 32).toFixed(2);
+  document.getElementById("fahrenheit").value = far;
+}
+
+function getCount() {
+  var numOfElements = document.getElementsByTagName("body")[0].childElementCount;
+  console.log(numOfElements);
+}
+function getCount() {
+  var numOfElements = document.getElementsByTagName("P").length;
+  console.log(numOfElements);
+}
+
+            function Calculate(){
+                var a=parseInt(document.getElementById("txta").value);
+                var b=parseInt(document.getElementById("txtb").value);
+                var c=a+b;
+                document.getElementById("txtc").value=""+c;
+            }
+        </SCRIPT>
+    </HEAD>
+    <BODY>
+        <h2>The Sum Program</h2>
+        <hr />
+        <table>
+            <tr>
+                <td>
+                    <label>Enter A:</label>
+                </td>
+                <td>
+                    <input type="text" name="txta" id="txta" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Enter B:</label>
+                </td>
+                <td>
+                    <input type="text" name="txtb" id="txtb" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    <input type="button" value="Calculate" onclick="Calculate()" />
+                </td>
+            </tr>
+             <tr>
+                <td>
+                    <label>Sum</label>
+                </td>
+                <td>
+                    <input type="text" name="txtc" id="txtc" readonly />
+                </td>
+            </tr>
+        </table>
+    </BODY>
+</HTML>
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML =
+"navigator.product is " + navigator.product;
+</script>
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML =
+"cookiesEnabled is " + navigator.cookieEnabled;
+</script>
+<body>
+  See console!<br><br>
+  <input type="text" id="fahrenheit"> - enter fahrenheit<br>
+  or<br>
+  <input type="text" id="celsius"> - enter celsius<br>
+</body>
+</html>
